@@ -34,3 +34,210 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     text-decoration: none;
     border-radius: 4px;
 }
+/* --- CONTACT PAGE STYLES --- */
+
+/* Center the main container and limit width */
+.contact-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 10px auto 40px auto;
+}
+
+/* Layout for the two cards */
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Wraps to vertical on mobile */
+}
+
+/* The Card Look */
+.method-card {
+    background: white;
+    border: 1px solid #eee;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 300px; /* Fixed width for uniformity */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect: Lifts the card slightly */
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.method-card h3 {
+    margin-top: 0;
+    color: #222;
+}
+
+/* Primary Button Style */
+.btn-primary {
+    display: inline-block;
+    background-color: #007bff; /* Professional Blue */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.email-text {
+    display: block;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.social-links a:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #eef2f5;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px; /* Makes them pill-shaped */
+    font-size: 0.9rem;
+    margin: 5px;
+    font-weight: 500;
+}
+/* Add to style.css */
+
+.education-subtitle {
+    font-family: "Segoe Script", "Zapfino", cursive;
+    font-weight: 1000;
+    font-size: 1rem;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+/* --- CODING ACHIEVEMENTS SECTION --- */
+
+.profiles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Wraps cards on mobile screens */
+    padding: 0 10px;
+}
+
+.profile-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 260px; /* Consistent width */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+/* Typography */
+.profile-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.profile-card .stat {
+    margin: 4px 0 0 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.profile-card .sub-text {
+    margin: 2px 0 0 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.arrow {
+    margin-left: auto;
+    font-weight: bold;
+    color: #ccc;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* --- INTERACTIVE HOVER EFFECTS --- FOR CODING ACHIEVEMENT SECTION*/ 
+
+/* 1. Lift the card up */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 2. Slide the arrow */
+.profile-card:hover .arrow {
+    transform: translateX(5px);
+    color: #333;
+}
+
+/* 3. Brand Specific Colors on Hover */
+
+/* LeetCode (Yellow/Orange) */
+.profile-card.leetcode:hover { border-color: #ffa116; }
+.profile-card.leetcode:hover h3 { color: #ffa116; }
+
+/* CodeForces (Red/Blue - using Red for impact) */
+.profile-card.codeforces:hover { border-color: #b40000; }
+.profile-card.codeforces:hover h3 { color: #b40000; }
+
+/* CodeChef (Brown) */
+.profile-card.codechef:hover { border-color: #5b4638; }
+.profile-card.codechef:hover h3 { color: #5b4638; }
+
+/* Codolio (Purple) */
+.profile-card.codolio:hover { border-color: #8e44ad; }
+.profile-card.codolio:hover h3 { color: #8e44ad; }
+
+footer h4{
+    margin-bottom: 5px;
+}
+footer p{
+    margin-top: 0px;
+}

@@ -61,24 +61,33 @@ h1 { font-size: 2.5rem; margin-bottom: 10px; }
     
     /* 1. Fix the Title Size */
     header h1 {
-        font-size: 2rem; /* Make the name smaller so it fits */
-        padding: 0 10px; /* Prevent text touching screen edges */
+        font-size: clamp(1.5rem, 5vw, 2.5rem); /* Name scales too */
+        padding: 0 10px;
     }
 
     /* 2. Fix the Buttons */
+    /* 1. Container: Takes full width */
     .header-buttons {
-        flex-direction: row; /* Stack buttons vertically */
-        align-items: center;    /* Center them */
-        gap: 15px;
+        display: flex;
+        flex-direction: row;      /* Side-by-side */
+        width: 100%;              /* Span the whole screen width */
+        padding: 0 10px;          /* Little breathing room on edges */
+        box-sizing: border-box;   /* Includes padding in width calculation */
+        gap: 10px;                /* Space between buttons */
     }
 
     .btn {
-        width: 40%;       /* Make buttons wide (easier to tap) */
-        height: 50px;
-        text-align: center;
-        display: block;   /* Ensure they take up space */
-        text-align: center;
-        margin: 0 auto;   /* Center align within the width */
+        flex: 1;                  /* KEY: Makes both buttons grow equally to fill space */
+        
+        /* FLUID TEXT: Scales between 11px and 16px based on screen width */
+        font-size: clamp(0.7rem, 4vw, 1rem); 
+        
+        padding: 12px 0;          /* Fixed vertical padding, auto horizontal */
+        text-align: center;       /* Ensure text is centered */
+        white-space: nowrap;      /* No wrapping text */
+        
+        /* Optional: prevent them from getting weirdly tall */
+        height: auto; 
     }
 
     /* 3. Fix the Cursive Text */
